@@ -24,7 +24,8 @@ SystemJS.config({
     "angular-resource": "github:angular/bower-angular-resource@1.5.6",
     "angular-route": "github:angular/bower-angular-route@1.5.6",
     "os": "github:jspm/nodelibs-os@0.2.0-alpha",
-    "plugin-typescript": "github:frankwallis/plugin-typescript@4.0.16"
+    "plugin-typescript": "github:frankwallis/plugin-typescript@4.0.16",
+    "text": "github:systemjs/plugin-text@0.0.8"
   },
   packages: {
     "github:angular/bower-angular-resource@1.5.6": {
