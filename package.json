@@ -11,11 +11,41 @@
     "directories": {
       "lib": "src"
     },
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.6",
+      "angular-resource": "github:angular/bower-angular-resource@^1.5.6",
+      "angular-ui-router": "github:angular-ui/angular-ui-router-bower@^0.3.0"
+    },
     "devDependencies": {
       "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
-      "plugin-typescript": "github:frankwallis/plugin-typescript@^4.0.16"
+      "plugin-typescript": "github:frankwallis/plugin-typescript@^4.0.16",
+      "text": "github:systemjs/plugin-text@^0.0.8"
     },
     "overrides": {
+      "github:angular/bower-angular-resource@1.5.6": {
+        "main": "angular-resource",
+        "registry": "jspm",
+        "dependencies": {
+          "angular": "^1.4.8"
+        },
+        "meta": {
+          "angular-resource.js": {
+            "deps": [
+              "angular"
+            ],
+            "format": "global"
+          }
+        }
+      },
+      "github:angular/bower-angular@1.5.6": {
+        "main": "angular",
+        "meta": {
+          "angular.js": {
+            "exports": "angular",
+            "format": "global"
+          }
+        }
+      },
       "npm:typescript@1.8.10": {
         "browser": {},
         "map": {
