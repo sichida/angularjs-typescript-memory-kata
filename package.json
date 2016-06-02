@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "postinstall": "jspm install",
-    "start": "live-server"
+    "start": "live-server",
+    "test": "karma start"
   },
   "jspm": {
     "name": "app",
@@ -60,6 +61,13 @@
     }
   },
   "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-jspm": "^2.1.1",
+    "karma-typescript-preprocessor": "^0.2.0",
     "live-server": "^1.0.0"
   }
 }

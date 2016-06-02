@@ -7,6 +7,9 @@ SystemJS.config({
       "meta": {
         "*.ts": {
           "loader": "plugin-typescript"
+        },
+        "*.html": {
+          "loader": "text"
         }
       }
     }

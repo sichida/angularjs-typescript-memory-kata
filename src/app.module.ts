@@ -1,7 +1,7 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-resource';
-import memoryView from './features/memory/memory.view.html!text';
+import memoryView from './features/memory/memory.view.html';
 
 import {MemoryController} from './features/memory/memory.controller.ts';
 
