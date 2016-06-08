@@ -1,24 +1,5 @@
 <div>
-<<<<<<< HEAD
-    <card ng-repeat="c in ctrl.cards" data="c" ng-click="c.toggleState()"></card>
-</div>
-||||||| merged common ancestors
-    {{ctrl.hello}}
-    <card data="ctrl.card" ng-click="ctrl.card.toggleState()"></card>
-</div>
-=======
-    {{ctrl.hello}}
-    <card data="ctrl.card" ng-click="ctrl.card.toggleState()"></card>
+    <card data="$ctrl.card" ng-click="$ctrl.card.toggleState()"></card>
 </div>
 
-</div>
-    <card image="https://pixabay.com/static/uploads/photo/2014/04/20/12/30/thumb-328420_640.jpg"></card>
-</div>
-<board rows="3" cols="6"></board>
-<<<<<<< HEAD
->>>>>>> #4: Board Component - WiP
-||||||| merged common ancestors
-=======
-    <card data="ctrl.card" ng-click="ctrl.card.toggleState()"></card>
-</div>
->>>>>>> Refactored Card component. Ready to be used
+<board rows="{{$ctrl.rows}}" cols="{{$ctrl.cols}}" cards="$ctrl.cards"></board>

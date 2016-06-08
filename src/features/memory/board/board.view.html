@@ -1,7 +1,9 @@
-<ul>
-    <li ng-repeat="Board.cards as rowCards">
-        <ul>
-            <li ng-repeat="rowCards as card">{{card}}</li>
+<ul class="board-rows">
+    <li ng-repeat="rowCards in $ctrl.cards track by $index" class="board-row">
+        <ul class="board-cols">
+            <li ng-repeat="card in rowCards track by $index" class="board-card">
+                <card data="card" ng-click="$ctrl.onCardClicked(card)"></card>
+            </li>
         </ul>
     </li>
 </ul>

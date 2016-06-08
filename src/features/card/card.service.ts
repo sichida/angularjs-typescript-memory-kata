@@ -1,4 +1,4 @@
-import {Card} from '../features/card/card.component.ts';
+import {Card} from './card.component.ts';
 
 const card1: Card = new Card('/src/assets/cards-260/1.png');
 const card2: Card = new Card('/src/assets/cards-260/2.png');

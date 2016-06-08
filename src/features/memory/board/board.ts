@@ -1,6 +1,6 @@
 import angular from 'angular';
-import {BoardComponentDefinition} from './board.component.ts';
+import './board.css';
+import {BoardComponentDefinition, BoardComponentController} from './board.component.ts';
 
-console.log(angular);
-angular.module('board', [])
+angular.module('memory', [])
     .component('board', BoardComponentDefinition);

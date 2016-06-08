@@ -7,13 +7,13 @@ import './features/memory/board/board.ts';
 import {MemoryController} from './features/memory/memory.controller.ts';
 import {CardComponentDefinition} from './features/card/card.component.ts';
 
-angular.module('typescript-kata', ['ui.router', 'board'])
+angular.module('typescript-kata', ['ui.router', 'memory'])
     .config($stateProvider => {
         $stateProvider.state('home', {
             url: '/',
             template: memoryView,
             controller: MemoryController,
-            controllerAs: 'ctrl'
+            controllerAs: '$ctrl'
         });
     })
     .component('card', CardComponentDefinition);

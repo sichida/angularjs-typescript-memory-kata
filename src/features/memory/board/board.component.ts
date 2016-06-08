@@ -1,11 +1,15 @@
 import boardTemplate from './board.view.html';
 import {Board} from './board.entity.ts';
+import {Card} from '../../card/card.component.ts';
 
-export class OddNumberOfCardsError extends Error {
+const generateRow = function(colsCount: Number): Card[] {
+    return Array.apply(null, {length: 4}).map(() => new Card(''));
+}
+
+export class WrongNumberOfCardsError extends Error {
     constructor(message) {
-        this.name = this.constructor.name;
-        this.message = message || 'Unable to render a board with an odd number of elements!';
-        super(this.message);
+        super(message);
+        this.message = message || 'Unable to render a board with a wrong number of elements!';
     }
 };
 
@@ -14,30 +18,37 @@ export interface BoardApi {
 };
 
 export class BoardComponentController {
-    private api: Object();
-    private rows: number;
     private cols: number;
-    private board: Board;
+    private rows: number;
+    private rawCards: Array<Card>;
+    private cards: Array<Array<Card>>;
 
-    constructor(): void {
-        if (this.rows * this.cols % 2 !== 0) {
-            throw new OddNumberOfCardsError();
+    $onChanges() {
+        if (this.rows && this.cols && this.rawCards && this.rows * this.cols !== this.rawCards.length) {
+            throw new WrongNumberOfCardsError('Wrong number of cards');
         }
-        this.board = this._initBoard();
+        this.cards = [];
+        for (var i = 0; i < this.cols; i++) {
+            let row: Card[] = [];
+            for (var j = 0; j < this.rows; j++) {
+                row.push(this.rawCards[i * this.rows + j]);
+            }
+            this.cards.push(row);
+        }
     }
 
-    _initBoard(rows: Number, cols: Number): Board {
-        
+    onCardClicked(card: Card): void {
+        card.toggleState();
     }
 };
 
 export const BoardComponentDefinition = {
     template: boardTemplate,
     controller: BoardComponentController,
-    controllerAs: 'Board',
     bindings: {
         api: '=',
         rows: '@',
-        cols: '@'
+        cols: '@',
+        rawCards: '<cards'
     }
 };
