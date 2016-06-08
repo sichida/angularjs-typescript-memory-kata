@@ -1,0 +1,11 @@
+{
+  "main": "angular-resource",
+  "meta": {
+    "angular-resource.js": {
+      "deps": [
+        "angular"
+      ],
+      "format": "global"
+    }
+  }
+}
