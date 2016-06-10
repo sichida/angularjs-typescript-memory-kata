@@ -4,7 +4,7 @@ import 'angular-resource';
 import memoryView from './features/memory/memory.view.html';
 
 import {MemoryController} from './features/memory/memory.controller.ts';
-import {CardComponent} from './features/card/card.component.ts';
+import {CardComponentDefinition} from './features/card/card.component.ts';
 
 angular.module('typescript-kata', ['ui.router'])
     .config($stateProvider => {
@@ -15,4 +15,4 @@ angular.module('typescript-kata', ['ui.router'])
             controllerAs: 'ctrl'
         });
     })
-    .component('card', new CardComponent());
+    .component('card', CardComponentDefinition);

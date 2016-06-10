@@ -1,48 +1,71 @@
 import ng from 'angular';
 import view from './card.view.html';
 
-export const DEFAULT_STATE: string = 'HIDDEN';
-export const HIDDEN_STATE: string = DEFAULT_STATE;
-export const SHOWN_STATE: string = 'SHOWN';
-export const DEFAULT_IMAGE_URL: string = 'http://www.publicdomainpictures.net/pictures/40000/nahled/question-mark.jpg';
+export const DEFAULT_IMAGE_URL: string = 'https://www.publicdomainpictures.net/pictures/40000/nahled/question-mark.jpg';
 
+/**
+ * This enum defines states of cards
+ */
+export enum CardState {
+    Hidden,
+    Shown
+}
+
+export const DEFAULT_STATE: CardState = CardState.Hidden;
+
+/**
+ * This class represents a Card
+ */
 export class Card {
-    state: string;
-    hiddenPicture: string;
-    image: string;
+    /** The state of the card. */
+    state: CardState;
+    /** The picture to display in hidden state. */
+    hiddenImageUrl: string;
+    /** The picture to display in shown state. */
+    imageUrl: string;
 
-    constructor() {
+    constructor(private imageUrl:string, private hiddenImageUrl:string = DEFAULT_IMAGE_URL) {
         this.state = DEFAULT_STATE;
-        this.hiddenPicture = DEFAULT_IMAGE_URL;
     }
 
     display(): void {
-        this.state = SHOWN_STATE;
+        this.state = CardState.Shown;
     }
 
     hide(): void {
-        this.state = HIDDEN_STATE;
+        this.state = CardState.Hidden;
     }
     
     toggleState(): void {
-        if (this.state == HIDDEN_STATE) {
+        if (this.state == CardState.Hidden) {
             this.display();
         } else {
             this.hide();
         }
     }
+    
+    isHidden():boolean {
+        return this.state == CardState.Hidden;
+    }
+
+    isShown():boolean {
+        return this.state == CardState.Shown;
+    }
+
 }
 
-export class CardComponent implements ng.IComponentOptions {
-    public bindings: any;
-    public controller: any;
-    public templateUrl: string;
-
+class ClassController {
     constructor() {
-        this.bindings = {
-            image: '@'
-        };
-        this.controller = Card;
-        this.template = view;
+        this.width = 100;
     }
 }
+
+export const CardComponentDefinition: ng.IComponentOptions = {
+    bindings: {
+        card: '=data',
+        width: '@'
+    },
+    template: view,
+    controller: ClassController,
+    controllerAs: 'ctrl'
+};
