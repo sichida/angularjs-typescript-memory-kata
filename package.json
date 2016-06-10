@@ -67,7 +67,10 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-jspm": "^2.1.1",
+    "karma-phantomjs-launcher": "^1.0.0",
     "karma-typescript-preprocessor": "^0.2.0",
-    "live-server": "^1.0.0"
+    "live-server": "^1.0.0",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.7"
   }
 }
