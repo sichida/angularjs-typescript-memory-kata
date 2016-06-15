@@ -8,7 +8,7 @@ module.exports = function(config) {
     frameworks: ['jspm', 'jasmine'],
 
     jspm: {
-      loadFiles: ['src/**/*.{!.png,.css}'],
+      loadFiles: ['src/**/*.html', 'src/**/*.ts', 'src/**/*.css'],
       serveFiles: ['src/**/*{!.spec}.{js,ts}'],
       browser: "jspm.browser.js",
       config: "jspm.config.js",
