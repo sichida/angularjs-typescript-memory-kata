@@ -29,7 +29,7 @@ In order to run this kata on your working station you need:
 ### 1. Let's verify your workstations
 
 Clone this project and run `npm install` command line:
-`
+```bash
 angular-kata$ git clone https://github.com/sichida/angularjs-typescript-memory-kata.git
 Cloning into 'angularjs-typescript-memory-kata'...
 remote: Counting objects: 459, done.
@@ -40,7 +40,7 @@ Resolving deltas: 100% (110/110), done.
 Checking connectivity... done.
 angular-kata$ cd angularjs-typescript-memory-kata
 angular-kata$ npm install
-`
+```
 
 If everything goes well you now have a ready to be developed typescript project!
 
@@ -57,7 +57,7 @@ located in `src/features/card/card.component.ts`.
 
 Once your component is created, you can test it by modifying _MemoryController_
 (_src/features/memory/memory.controller.ts_):
-`typecript
+```typecript
 import {Card} from '../card/card.component.ts';
 export class MemoryController {
     card: Card;
@@ -65,12 +65,12 @@ export class MemoryController {
         this.card:Card = new Card('/src/assets/cards-260/1.png');
     }
 }
-`
+```
 
 and its view (_src/features/memory/memory.view.html_)
-`html
+```html
 <card data="ctrl.card" ng-click="ctrl.card.toggleState()"></card>
-`
+```
 
 Now run the command line `npm start`and check you have a card displayed at
 http://localhost:8080/#/.
