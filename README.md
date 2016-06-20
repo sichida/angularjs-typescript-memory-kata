@@ -10,14 +10,14 @@ The main advantages to choose this language are:
 - having a testable application
 - learn about Typescript before Angular 2 is out of beta 
 
-You should follow all steps describe [here](#Steps) to use this kata properly.
+You should follow all steps describe [here](#steps) to use this kata properly.
 
-## Memory game - rules
+## [Memory game - rules](#memory-game-rules)
 Rules are very simple: you need to find all duplicated cards.
 You need to select 2 cards and, if they are the same, you get points; if not,
 they hide and you must remember their location for future matches. 
 
-## Requirements
+## [Requirements](#requirements)
 
 In order to run this kata on your working station you need:
 - [node.js](https://nodejs.org/en/)
@@ -25,8 +25,8 @@ In order to run this kata on your working station you need:
     - You need to install [the beta version](http://jspm.io/0.17-beta-guide/index.html)
 - Knowledgment in AngularJs. The aim of this kata is to learn Typescript, not AngularJs.
 
-## Steps
-### 1. Let's verify your workstations
+## [Steps](#steps)
+### [1. Let's verify your workstations](#lets-verify-your-workstation)
 
 Clone this project and run `npm install` command line:
 ```bash
@@ -44,7 +44,7 @@ angular-kata$ npm install
 
 If everything goes well you now have a ready to be developed typescript project!
 
-### 2. Let's create your first entity
+### [2. Let's create your first entity](#lets-create-your-first-entity)
 
 During all your developments, I suggest you to run the task `npm test`in background.
 As we are using AngularJs for our kata, I provide AngularJs specific declarations. You
@@ -75,7 +75,7 @@ and its view (_src/features/memory/memory.view.html_)
 Now run the command line `npm start`and check you have a card displayed at
 http://localhost:8080/#/.
 
-### 3. I need a board!
+### [3. I need a board!](#i-need-a-board)
 
 Now that we have a card component we want a board to display all cards.
 Once again, you will need to write tests in `src/features/board/board.spec.ts` and
@@ -109,3 +109,7 @@ and its view (_src/features/memory/memory.view.html_)
 ```html
 <board rows="{{$ctrl.rows}}" cols="{{$ctrl.cols}}" cards="$ctrl.cards"></board>
 ```
+
+### [4. Let's rulez](#lets-rules)
+
+Finally, all you need to do it implementing rules. 
