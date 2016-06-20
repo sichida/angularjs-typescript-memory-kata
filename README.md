@@ -57,7 +57,7 @@ located in `src/features/card/card.component.ts`.
 
 Once your component is created, you can test it by modifying _MemoryController_
 (_src/features/memory/memory.controller.ts_):
-```typecript
+```javacript
 import {Card} from '../card/card.component.ts';
 export class MemoryController {
     card: Card;
@@ -69,8 +69,43 @@ export class MemoryController {
 
 and its view (_src/features/memory/memory.view.html_)
 ```html
-<card data="ctrl.card" ng-click="ctrl.card.toggleState()"></card>
+<card data="$ctrl.card" ng-click="$ctrl.card.toggleState()"></card>
 ```
 
 Now run the command line `npm start`and check you have a card displayed at
 http://localhost:8080/#/.
+
+### 3. I need a board!
+
+Now that we have a card component we want a board to display all cards.
+Once again, you will need to write tests in `src/features/board/board.spec.ts` and
+implement the _Board_ in `src/features/board/board.component.ts`
+
+Once your component is ready and all tests are passed, you can update your
+_MemoryController_ (_src/features/memory/memory.controller.ts_) with the following code:
+```javacript
+import './memory.css';
+import {Card, CardState} from '../card/card.component.ts';
+import {allCards} from '../card/card.service.ts';
+import angular from 'angular';
+
+export class MemoryController {
+    cards: Array<Card>;
+    rows: number;
+    cols: number;
+    
+    constructor() {
+        this.rows = 3;
+        this.cols = 6;
+        this.cards = [
+            allCards[0], allCards[1], allCards[1], allCards[3], allCards[4], allCards[5],
+            allCards[4], allCards[0], allCards[6], allCards[3], allCards[7], allCards[2],
+            allCards[6], allCards[7], allCards[8], allCards[8], allCards[5], allCards[2]
+        ].map(card => angular.copy(card));
+    }
+}```
+
+and its view (_src/features/memory/memory.view.html_)
+```html
+<board rows="{{$ctrl.rows}}" cols="{{$ctrl.cols}}" cards="$ctrl.cards"></board>
+```
