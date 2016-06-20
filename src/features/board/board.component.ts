@@ -1,6 +1,5 @@
 import boardTemplate from './board.view.html';
-import {Board} from './board.entity.ts';
-import {Card} from '../../card/card.component.ts';
+import {Card} from '../card/card.component.ts';
 
 const generateRow = function(colsCount: Number): Card[] {
     return Array.apply(null, {length: 4}).map(() => new Card(''));
@@ -23,7 +22,7 @@ export class BoardComponentController {
     private rawCards: Array<Card>;
     private cards: Array<Array<Card>>;
 
-    $onChanges() {
+    $onInit() {
         if (this.rows && this.cols && this.rawCards && this.rows * this.cols !== this.rawCards.length) {
             throw new WrongNumberOfCardsError('Wrong number of cards');
         }
@@ -44,7 +43,7 @@ export class BoardComponentController {
 
 export const BoardComponentDefinition = {
     template: boardTemplate,
-    controller: BoardComponentController,
+    controller: () => new BoardComponentController,
     bindings: {
         api: '=',
         rows: '@',

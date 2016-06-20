@@ -2,7 +2,7 @@ import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-resource';
 import memoryView from './features/memory/memory.view.html';
-import './features/memory/board/board.ts';
+import './features/board/board.ts';
 
 import {MemoryController} from './features/memory/memory.controller.ts';
 import {CardComponentDefinition} from './features/card/card.component.ts';

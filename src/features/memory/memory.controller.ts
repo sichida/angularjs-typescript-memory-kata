@@ -1,7 +1,7 @@
 import './memory.css';
+import angular from 'angular';
 import {Card, CardState} from '../card/card.component.ts';
 import {allCards} from '../card/card.service.ts';
-import angular from 'angular';
 
 export class MemoryController {
     cards: Array<Card>;
