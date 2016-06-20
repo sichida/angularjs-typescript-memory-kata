@@ -1,10 +1,11 @@
+import './memory.css';
 import {Card} from '../card/card.component.ts';
+import {allCards} from '../../services/card.service.ts';
 
 export class MemoryController {
-    hello: string = 'Hello World!';
-    card: Card;
+    cards: Array<Card>;
     
     constructor() {
-        this.card = new Card('https://pixabay.com/static/uploads/photo/2014/04/20/12/30/thumb-328420_640.jpg');
+        this.cards = allCards;
     }
 }

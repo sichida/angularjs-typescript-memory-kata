@@ -1,5 +1,6 @@
 import ng from 'angular';
 import view from './card.view.html';
+import './card.css';
 
 export const DEFAULT_IMAGE_URL: string = 'https://www.publicdomainpictures.net/pictures/40000/nahled/question-mark.jpg';
 
@@ -56,14 +57,12 @@ export class Card {
 
 class ClassController {
     constructor() {
-        this.width = 100;
     }
 }
 
 export const CardComponentDefinition: ng.IComponentOptions = {
     bindings: {
-        card: '=data',
-        width: '@'
+        card: '=data'
     },
     template: view,
     controller: ClassController,

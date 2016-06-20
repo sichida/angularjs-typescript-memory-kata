@@ -1,4 +1,4 @@
-<article>
-    <img ng-src="{{ctrl.card.hiddenImageUrl}}" width="{{ctrl.width}}" ng-if="ctrl.card.isHidden()">
-    <img ng-src="{{ctrl.card.imageUrl}}" width="{{ctrl.width}}" ng-if="ctrl.card.isShown()">
+<article class="card">
+    <img ng-src="{{ctrl.card.hiddenImageUrl}}" ng-if="ctrl.card.isHidden()">
+    <img ng-src="{{ctrl.card.imageUrl}}" ng-if="ctrl.card.isShown()">
 </article>
