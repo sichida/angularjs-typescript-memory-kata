@@ -1,0 +1,11 @@
+{
+  "main": "angular-mocks",
+  "meta": {
+    "angular-mocks.js": {
+      "deps": [
+        "angular"
+      ],
+      "format": "global"
+    }
+  }
+}

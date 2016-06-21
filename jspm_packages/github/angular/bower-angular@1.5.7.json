@@ -1,0 +1,9 @@
+{
+  "main": "angular",
+  "meta": {
+    "angular.js": {
+      "exports": "angular",
+      "format": "global"
+    }
+  }
+}
