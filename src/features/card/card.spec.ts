@@ -2,64 +2,51 @@ import {CardState, DEFAULT_IMAGE_URL, Card} from './card.component.ts';
 
 describe('Card', () => {
   it('should have a state attribute', () => {
-    expect(new Card().state).toBeDefined();
+    // TODO: #2 add state attibute. It should be of type CardState
   });
   it('should have a hidden picture attribute', () => {
-    expect(new Card().hiddenImageUrl).toBeDefined();
-    expect(new Card().hiddenImageUrl).toEqual(DEFAULT_IMAGE_URL);
+    /* 
+    * TODO: #2 
+    * A card should have a hidden image url. It should be customizable but
+    * we also should have a default image when constructing a card
+    */
   });
   it('should be hidden by default', () => {
-    expect(new Card().state).toEqual(CardState.Hidden);
+    // TODO: #2 default state should be hidden
   });
   it('should have a constructor with image', () => {
-    const card = new Card('https://pixabay.com/static/uploads/photo/2014/04/20/12/30/thumb-328420_640.jpg');
-    expect(card.imageUrl).toBeDefined();
-    expect(card.imageUrl).toEqual('https://pixabay.com/static/uploads/photo/2014/04/20/12/30/thumb-328420_640.jpg');
+    /* 
+    * TODO: #2 
+    * We should be able to create a card by giving an url within the constructor.
+    * This image represents the shown face of the card.
+    * We also should be able to customize the hidden face as well.
+    */    
   });
   describe('state', () => {
     it('should be toggled to \'SHOWN\'', () => {
-      const card = new Card();
-      expect(card.state).toEqual(CardState.Hidden);
-      card.display();
-      expect(card.state).toEqual(CardState.Shown);
+      // TODO: #2 we should have a method `display` that toggle state to shown state
     });
     it('should be toggled to \'HIDDEN\'', () => {
-      const card = new Card();
-      expect(card.state).toEqual(CardState.Hidden);
-      card.display();
-      expect(card.state).toEqual(CardState.Shown);
-      card.hide();
-      expect(card.state).toEqual(CardState.Hidden);
+      // TODO: #2 we should have a method `hide` that toggle state to hidden state
     });
     it('should be toggled', () => {
-      const card = new Card();
-      expect(card.state).toEqual(CardState.Hidden);
-      card.toggleState();
-      expect(card.state).toEqual(CardState.Shown);
-      card.toggleState();
-      expect(card.state).toEqual(CardState.Hidden);
+      // TODO: #2 we should have a method `toggleState` that toggle card state
     });
   });
   describe('isHidden', () => {
     it('should respond true', () => {
-      const card = new Card();
-      expect(card.isHidden()).toEqual(true);
+      // TODO: #2 we should have a method `isHidden` that tells if the card is hidden
     });
     it('should respond false', () => {
-      const card = new Card();
-      card.toggleState();
-      expect(card.isHidden()).toEqual(false);
+      // TODO: #2 Check if method `isHidden` works in any case
     });
   });
   describe('isShown', () => {
     it('should respond false', () => {
-      const card = new Card();
-      expect(card.isShown()).toEqual(false);
+      // TODO: #2 we should have a method `isShown` that tells if the card is shown
     });
     it('should respond true', () => {
-      const card = new Card();
-      card.toggleState();
-      expect(card.isShown()).toEqual(true);
+      // TODO: #2 Check if method `isShown` works in any case
     });
   });
 });

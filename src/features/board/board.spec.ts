@@ -19,32 +19,36 @@ describe('BoardComponentController', () => {
   });
 
   it('should initiate a Board with the given attributes', () => {
-    const component = $componentController('board', null, $scope);
-    expect(component).toBeDefined();
-    expect(component.rows).toEqual($scope.rows);
-    expect(component.cols).toEqual($scope.cols);
-    expect(component.cards).toEqual($scope.cards);
+    /*
+    * TODO: #3 
+    * We should create a component based on the $scope and check
+    * rows, cols and cards are correctly initilized
+    * tips: const component = $componentController('board', null, $scope);
+    */
   });
 
   it('should transform the given cards list into a two dimensional array', () => {
-    const component = $componentController('board', null, $scope);
-    component.$onInit();
-    expect(component.cards).toEqual([[allCards[0], allCards[1]], [allCards[1], allCards[0]]]);
+    /*
+    * TODO: #3
+    * The component should have a method `$onInit` that convert the one dimensional
+    * rawCards attributes into a two dimensional array `cards`
+    */
   });
 
   it(`should throw an exception if the given dimensions don't match the number of cards`, () => {
-    $scope.rows = 3;
-    const component = $componentController('board', null, $scope);
-    expect(component.$onInit).toThrow();
+    /*
+    * TODO: #3
+    * The component should raise an exception in the method `$onInit` if the number of
+    * cards if not enought based on given dimensions.
+    * tips: $scope.rows = 3 before creating component
+    */
   });
 
   it('should toggle only the clicked card', () => {
-    const component = $componentController('board', null, $scope);
-    component.$onInit();
-    component.onCardClicked(component.cards[0][0]);
-    expect(component.cards[0][0].state).toEqual(CardState.Shown);
-    expect(component.cards[0][1].state).toEqual(CardState.Hidden);
-    expect(component.cards[1][0].state).toEqual(CardState.Hidden);
-    expect(component.cards[1][1].state).toEqual(CardState.Hidden);
+    /*
+    * TODO: #3
+    * The component should be able to toggle card state on click event
+    * tips: add a mathod named `onCardClicked`
+    */
   });
 });
