@@ -46,10 +46,12 @@ If everything goes well you now have a ready to be developed typescript project!
 
 ### [2. Let's create your first entity](#lets-create-your-first-entity)
 
-During all your developments, I suggest you to run the task `npm test`in background.
+During all your developments, I suggest you to run the task `npm test` in background.
 As we are using AngularJs for our kata, I provide AngularJs specific declarations. You
 can focus on Typescript but if you meet difficulties feel free to create an
 [issue](https://github.com/sichida/angularjs-typescript-memory-kata/issues/new).
+We provide a set of cards with image data to avoid you the painfulness of searching
+images among the net (in the file `src/features/card/card.service.ts`). All cards are initialized using _Card_ component. 
 
 First of all, we need a card component. To do so, you need to implement tests located in
 `src/features/card/card.spec.ts` and then make tests pass by implementing _Card_ entity
@@ -58,6 +60,7 @@ located in `src/features/card/card.component.ts`.
 Once your component is created, you can test it by modifying _MemoryController_
 (_src/features/memory/memory.controller.ts_):
 ```javacript
+import './memory.css';
 import {Card} from '../card/card.component.ts';
 export class MemoryController {
     card: Card;

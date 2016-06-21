@@ -55,6 +55,15 @@
           }
         }
       },
+      "github:angular/bower-angular@1.5.7": {
+        "main": "angular",
+        "meta": {
+          "angular.js": {
+            "exports": "angular",
+            "format": "global"
+          }
+        }
+      },
       "npm:typescript@1.8.10": {
         "browser": {},
         "map": {

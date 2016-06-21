@@ -1,3 +1,4 @@
+import './board.css';
 import boardTemplate from './board.view.html';
 import {Card} from '../card/card.component.ts';
 

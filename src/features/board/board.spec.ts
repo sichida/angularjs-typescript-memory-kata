@@ -7,7 +7,7 @@ import {CardState} from '../card/card.component.ts';
 describe('BoardComponentController', () => {
   let $scope, $componentController;
 
-  beforeEach(module('memory'));
+  beforeEach(module('typescript-kata'));
   beforeEach(inject((_$componentController_) => $componentController = _$componentController_));
   beforeEach(() => $scope = {
     rows: 2,
