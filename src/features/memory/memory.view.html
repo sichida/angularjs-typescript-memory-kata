@@ -1,3 +1,5 @@
 <div>
-    <card ng-repeat="c in ctrl.cards" data="c" ng-click="c.toggleState()"></card>
+    <card data="$ctrl.card" ng-click="$ctrl.card.toggleState()"></card>
 </div>
+
+<board rows="{{$ctrl.rows}}" cols="{{$ctrl.cols}}" cards="$ctrl.cards"></board>

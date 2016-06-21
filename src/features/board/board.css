@@ -1,0 +1,11 @@
+.board-row {
+    display: inline-block;
+}
+
+.board-rows, .board-cols {
+    list-style-type: none;
+}
+
+.board {
+    list-style-type: none;
+}

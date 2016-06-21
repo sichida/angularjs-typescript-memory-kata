@@ -26,7 +26,8 @@ SystemJS.config({
     "npm:*.json"
   ],
   map: {
-    "angular": "github:angular/bower-angular@1.5.6",
+    "angular": "github:angular/bower-angular@1.5.7",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.5.7",
     "angular-resource": "github:angular/bower-angular-resource@1.5.6",
     "angular-ui-router": "github:angular-ui/angular-ui-router-bower@0.3.0",
     "css": "github:systemjs/plugin-css@0.1.23",
@@ -35,9 +36,14 @@ SystemJS.config({
     "text": "github:systemjs/plugin-text@0.0.8"
   },
   packages: {
+    "github:angular/bower-angular-mocks@1.5.7": {
+      "map": {
+        "angular": "github:angular/bower-angular@1.5.7"
+      }
+    },
     "github:angular/bower-angular-resource@1.5.6": {
       "map": {
-        "angular": "github:angular/bower-angular@1.5.6"
+        "angular": "github:angular/bower-angular@1.5.7"
       }
     },
     "github:frankwallis/plugin-typescript@4.0.16": {
