@@ -12,9 +12,9 @@ describe('Card', () => {
     expect(new Card().state).toEqual(CardState.Hidden);
   });
   it('should have a constructor with image', () => {
-    const card = new Card('https://pixabay.com/static/uploads/photo/2014/04/20/12/30/thumb-328420_640.jpg');
+    const card = new Card('/src/assets/cards-260/1.png');
     expect(card.imageUrl).toBeDefined();
-    expect(card.imageUrl).toEqual('https://pixabay.com/static/uploads/photo/2014/04/20/12/30/thumb-328420_640.jpg');
+    expect(card.imageUrl).toEqual('/src/assets/cards-260/1.png');
   });
   describe('state', () => {
     it('should be toggled to \'SHOWN\'', () => {
