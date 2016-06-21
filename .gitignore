@@ -2,3 +2,5 @@ node_modules/
 jspm_packages/
 src/*.js
 src/*.js.map
+.idea
+*.iml

@@ -20,16 +20,16 @@ describe('BoardComponentController', () => {
 
   it('should initiate a Board with the given attributes', () => {
     /*
-    * TODO: #3 
+    * TODO: #12
     * We should create a component based on the $scope and check
-    * rows, cols and cards are correctly initilized
-    * tips: const component = $componentController('board', null, $scope);
+    * rows, cols and cards are correctly initialized
+    * tips: const component:BoardComponentController = $componentController('board', null, $scope);
     */
   });
 
   it('should transform the given cards list into a two dimensional array', () => {
     /*
-    * TODO: #3
+    * TODO: #13
     * The component should have a method `$onInit` that convert the one dimensional
     * rawCards attributes into a two dimensional array `cards`
     */
@@ -37,7 +37,7 @@ describe('BoardComponentController', () => {
 
   it(`should throw an exception if the given dimensions don't match the number of cards`, () => {
     /*
-    * TODO: #3
+    * TODO: #14
     * The component should raise an exception in the method `$onInit` if the number of
     * cards if not enought based on given dimensions.
     * tips: $scope.rows = 3 before creating component
@@ -46,7 +46,7 @@ describe('BoardComponentController', () => {
 
   it('should toggle only the clicked card', () => {
     /*
-    * TODO: #3
+    * TODO: #15
     * The component should be able to toggle card state on click event
     * tips: add a mathod named `onCardClicked`
     */

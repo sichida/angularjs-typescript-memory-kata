@@ -68,7 +68,7 @@ import {Card} from '../card/card.component.ts';
 export class MemoryController {
     card: Card;
     constructor() {
-        this.card:Card = new Card('/src/assets/cards-260/1.png');
+        this.card = new Card('/src/assets/cards-260/1.png');
     }
 }
 ```

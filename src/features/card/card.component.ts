@@ -8,17 +8,17 @@ export const DEFAULT_IMAGE_URL: string = '/src/assets/question-mark.jpg';
  * This enum defines states of cards
  */
 export enum CardState {
-    // TODO: #2 Add states
+    // TODO: #1 Add states
 }
 
-// TODO: #2 Define default state
+// TODO: #1 Define default state
 export const DEFAULT_STATE: CardState = null;
 
 /**
  * This class represents a Card
  */
 export class Card {
-    // TODO: #2 Create card component
+    // TODO: Create card component
     constructor() {
     }
 }

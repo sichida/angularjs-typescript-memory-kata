@@ -3,7 +3,7 @@ import boardTemplate from './board.view.html';
 import {Card} from '../card/card.component.ts';
 
 export class BoardComponentController {
-    // TODO: #3 Create board component
+    // TODO: #12 Create board component
 };
 
 export const BoardComponentDefinition = {
