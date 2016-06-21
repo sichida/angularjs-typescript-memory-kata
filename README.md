@@ -11,6 +11,8 @@ The main advantages to choose this language are:
 - learn about Typescript before Angular 2 is out of beta 
 
 You should follow all steps describe [here](#steps) to use this kata properly.
+The running application with full solutions is available in the branch
+[running_application](https://github.com/sichida/angularjs-typescript-memory-kata/tree/running_application).
 
 ## [Memory game - rules](#memory-game-rules)
 Rules are very simple: you need to find all duplicated cards.
@@ -51,7 +53,8 @@ As we are using AngularJs for our kata, I provide AngularJs specific declaration
 can focus on Typescript but if you meet difficulties feel free to create an
 [issue](https://github.com/sichida/angularjs-typescript-memory-kata/issues/new).
 We provide a set of cards with image data to avoid you the painfulness of searching
-images among the net (in the file `src/features/card/card.service.ts`). All cards are initialized using _Card_ component. 
+images among the net (in the file `src/features/card/card.service.ts`).
+All cards are initialized using _Card_ component. 
 
 First of all, we need a card component. To do so, you need to implement tests located in
 `src/features/card/card.spec.ts` and then make tests pass by implementing _Card_ entity
